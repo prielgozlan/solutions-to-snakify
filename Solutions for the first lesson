@@ -1,0 +1,72 @@
+1. Sum of three numbers:
+a = int(input())
+b = int(input())
+c = int(input())
+print(a + b + c)
+
+
+2. Hi John:
+a = str(input())
+b = "Hi"
+print(b,a)
+
+
+3. Square:
+squared = int(input())
+print(squared**2)
+
+
+4. Area of right-angled triangle:
+x = float(input("enter a length"))
+y = float(input("enter a heigth"))
+b = (x * y/2 )
+print(b)
+
+
+5.Hello, Harry!:
+print("Hello,",input() +"!")
+
+
+6.Apple sharing:
+students = int(input("enter a number students"))
+apples =int (input("enter a number apples"))
+sum = apples//students
+print(sum)
+print(apples%students)
+
+
+7.Previous and next:
+a = int(input("number"))
+print("The next number for the number", a ,"is",str(a + 1)+'.')
+print("The previous number for the number ", a, "is",str(a -1) +'.')
+
+
+8.Two timestamps:
+a1 = int(input("hours"))
+b1 = int(input("minutes"))
+c1 = int(input("seconds"))
+a2 = int(input("hours"))
+b2 = int(input("minutes"))
+c2 = int(input("seconds"))
+a3 = a2-a1
+b3 = b2-b1
+c3 = c2-c1
+#print(a3*3600+b3*60+c3)
+print((a3*3600)+(b3*60)+c3)
+
+9.School desks:
+a = int(input())
+b = int(input())
+c = int(input())
+print(a // 2 + b // 2 + c // 2 + a % 2 + b % 2 + c % 2)
+
+
+
+
+
+
+
+
+
+
+
