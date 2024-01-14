@@ -1,0 +1,145 @@
+Minimum of two numbers:
+a = int(input("write a number_1"))
+b = int(input("write a number_2"))
+if a > b:
+    print(b)
+else:
+    print(a)
+
+Sign function:
+a = int(input("enter number"))
+if a > 0:
+    print(1)
+elif a < 0:
+    print(-1)
+else:
+    print(0)
+
+
+Minimum of three numbers:
+a = int(input(""))
+b = int(input(""))
+c = int(input(""))
+if a < b and a < c:
+    print(a)
+elif b < a and b < c:
+    print(b)
+else:
+    print(c)
+
+Equal numbers:
+a = int(input(""))
+b = int(input(""))
+c = int(input(""))
+if a == b == c:
+    print(3)
+elif a == b or a == c or c == b:
+    print(2)
+else:
+    print(0)
+
+Rook move:
+a = int(input(""))
+b = int(input(""))
+c = int(input(""))
+d = int(input(""))
+if a==c and 0<d<=8 or b==d and 0<c<=8:
+    print("YES")
+else:
+    print("NO")
+
+Chess board - same color:
+x1 = int(input("enter number"))
+y1 = int(input("enter number"))
+x2 = int(input("enter number"))
+y2 = int(input("enter number"))
+if (x1 + y1)% 2 == (x2+y2)% 2:
+    print("YES")
+else:
+    print("NO")
+    
+
+King move:
+x1 = int(input())
+y1 = int(input())
+x2 = int(input())
+y2 = int(input())
+if abs(x1 - x2) <= 1 and abs(y1 - y2) <= 1:
+    print('YES')
+else:
+    print('NO')
+
+
+Bishop moves:
+x1 = int(input())
+y1 = int(input())
+x2 = int(input())
+y2 = int(input())
+if abs(x1 - x2) == abs(y1 - y2):
+    print('YES')
+else:
+    print('NO')
+
+Queen move:
+x1 = int(input(""))
+y1 = int(input(""))
+x2 = int(input(""))
+y2 = int(input(""))
+if abs(x1 - x2) == abs(y1 - y2) or x1 == x2 or y1 == y2:
+    print("YES")
+else:
+    print("NO")
+
+Knight move:
+x1 = int(input(""))
+y1 = int(input(""))
+x2 = int(input(""))
+y2 = int(input(""))
+if abs(x1 - x2) == 2 and abs(y1 - y2) == 1 or abs(y1 - y2) == 2 and abs(x1 - x2) == 1:
+    print("YES")
+else:
+    print("NO")
+
+Chocolate bar:
+a = int(input(""))
+b = int(input(""))
+c = int(input(""))
+if (a * b - c) % a == 0 and (a * b - c) > 0 or (a * b - c) % b == 0 and (a * b - c) > 0:
+    print("YES")
+else:
+    print("NO")
+
+Leap year:
+year = int(input(""))
+if year % 4 == 0 and year % 100 != 0 or year % 400 == 0:
+    print("LEAP")
+else:
+    print("COMMON")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
