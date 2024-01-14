@@ -1,0 +1,60 @@
+Last digit of integer:
+a = input("")
+print(a[-1])
+
+Tens digit:
+a = int(input(""))
+print(a // 10 % 10)
+
+Sum of digits:
+a = int(input(""))
+print((a % 10) + (a // 10 % 10) + (a // 100 % 10) )
+
+Fractional part:
+a = float(input())
+print(a % 1)
+
+First digit after decimal point:
+a = float(input(""))
+a = (a-int(a))*10
+print(int(a))
+
+Car route:
+import math 
+a = int(input(""))
+b = int(input(""))
+c = b / a
+print(math.ceil(c))
+
+Digital clock:
+a = int(input(""))
+b = a // 60
+c = ((a / 60) - (a // 60))*60
+print(b,(c))
+
+Total cost:
+dollars = float(input(""))
+cents = float(input(""))
+sum1 = float(input(""))
+cents1 = (cents / 100 + dollars)*sum1
+a = (cents1-int(cents1))*100
+print(int(cents1),(a))
+
+Clock face - 1:
+h = int(input())
+m = int(input())
+s = int(input())
+print(h * 30 + m * 30 / 60 + s * 30 / 3600)
+
+Clock face - 2:
+x = float(input())
+print(x % 30 * 12)
+
+
+
+
+
+
+
+
+
