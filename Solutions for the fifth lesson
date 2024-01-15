@@ -1,0 +1,102 @@
+Slices:
+x = input("")
+print(x[2])
+print(x[-2])
+print(x[:5])
+print(x[:-2])
+print(x[0::2])
+print(x[1::2])
+print(x[::-1])
+print(x[::-2])
+print(len(x))
+
+The number of words:
+x = input("")
+print(x.count(" ")+1)
+
+The two halves:
+x = input("")
+y = len(x)
+print(x[(y+1)//2:]+x[:(y+1)//2])
+
+
+To swap the two words:
+x = input("")
+num_1 = x[:x.find(" ")+1]
+num_2 = x[x.find(" ")+1:]
+print(num_2,num_1)
+
+The first and last occurrence:
+x = input("")
+if x.count("f") == 1:
+    print(x.find("f"))
+elif x.count("f") > 1:
+    print(x.find("f"),x.rfind("f"))
+
+The second occurrence:
+s = input()
+if s.count('f') == 1:
+    print(-1)
+elif s.count('f') < 1:
+    print(-2)
+else:
+    print(s.find('f', s.find('f') + 1))
+
+Remove the fragment:
+x = input("")
+print(x[:x.find("h")]+x[x.rfind("h")+1:])
+
+Reverse the fragment:
+x = input("")
+y = x[x.find("h"):x.rfind("h")]
+a = x[x.rfind("h")+1:]
+z = x[:x.find("h")+1]
+print(z+y[::-1]+a)
+
+
+Replace the substring:
+x = input("")
+print(x.replace("1","one"))
+
+Delete a character:
+x = input("")
+print(x.replace("@",""))
+
+
+Replace within the fragment:
+x = input("")
+a = x[x.find("h")+1:x.rfind("h")]
+b = a.replace("h","H")
+c = x[:x.find("h")+1]
+d = x[x.rfind("h"):]
+print(c+b+d)
+
+Delete every third character:
+x = input("")
+for y in range(len(x)):
+    if y % 3 != 0:
+        print(x[y],end="")
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
