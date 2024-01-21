@@ -1,0 +1,245 @@
+List of squares:
+x = 1
+y = int(input(""))
+countr = 0
+while x ** 2 <= y:
+    print(x**2,end=" ")
+    x += 1
+
+Least divisor:
+x = int(input(""))
+y = x
+while y > 0:
+    if (x / y % 1) == 0 and y > 1:
+        z = y
+    y -= 1
+print(z)
+
+The power of two:
+x = int(input(""))
+a = 1
+b = 1
+con = 0
+while True:
+    a *= 2
+    if a > x:
+        break
+    con += 1
+    b = a
+print(con, b)   
+
+Morning jog:
+x = int(input("enter first number"))
+y = int(input("enter second number"))
+z = 1
+while y > x:
+    x += x*0.1
+    z += 1
+print(z)
+
+The length of the sequence:
+x = 1
+y = -1
+while x != 0:
+    x = int(input(""))
+    y += 1
+print(y)
+
+The sum of the sequence:
+len = 0
+x = int(input(""))
+while x != 0:
+    len += x
+    x = int(input(""))
+    
+print(len)  
+
+The average of the sequence:
+x = int(input(""))
+sum = 0
+cou = 0
+while x != 0:
+    sum += x
+    cou += 1
+    x = int(input(""))
+print(sum/cou)  
+
+The maximum of the sequence:
+x = int(input(""))
+y = 0
+while x != 0:
+    if x > y:
+        y = x
+    elif y > x:
+        y = y
+    x = int(input(""))    
+print(y)
+
+The index of the maximum of a sequence:
+list = []
+x = int(input(""))
+y = 0
+while x != 0:
+    list.append(x)
+    
+    if x > y:
+        y = x
+    elif y > x:
+        y = y
+    x = int(input(""))
+print(list.index(y)+1)
+
+The number of even elements of the sequence:
+x = int(input(""))
+y = 0
+while x != 0:
+    if x % 2 == 0:
+        y += 1
+    x = int(input(""))
+print(y)
+
+The number of elements that are greater than the previous one:
+x = int(input(""))
+y = x
+z = 0
+while x != 0:
+    x = int(input(""))
+    if x > y:
+        z += 1
+    y = x
+        
+print(z)
+
+The second maximum:
+x = int(input(""))
+y = x
+a = []
+while x != 0:
+    a.append(x)
+    x = int(input(""))
+    if x > y:
+        y = x
+a.remove(y)
+z = 0
+for y in a:
+    if y > z:
+        z = y
+print(z)
+
+The number of elements equal to the maximum:
+x = int(input(""))
+y = x
+a = []
+while x != 0:
+    a.append(x)
+    x = int(input(""))
+    if x > y:
+        y = x
+z = 0
+for b in a:
+    if b == y:
+        z += 1
+print(z)
+
+Fibonacci numbers:
+a = int(input(""))
+x = 1
+y = 1
+if a == 0:
+    print(0)
+elif a != 0:
+    while a - 2 > 0:
+        x = x+y
+        y = x-y
+        a -= 1
+    print(x)
+
+The index of a Fibonacci number:
+n = int(input())
+a = 0
+b = 1
+c = 1
+ind = 1
+while c < n:
+    c = a + b
+    a = b
+    b = c
+    ind += 1
+if c != n:
+        print(-1)
+else:
+    print(ind)
+
+The maximum number of consecutive equal elements:
+n = int(input())
+a = n
+len1 = 1
+list1 = []
+while n != 0:
+    n = int(input())
+    if n == a:
+        len1 += 1
+    else:
+        a = n
+        len1 = 1
+    list1.append(len1)
+print(max(list1))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
