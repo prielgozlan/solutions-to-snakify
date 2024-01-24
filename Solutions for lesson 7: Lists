@@ -1,0 +1,173 @@
+Even indices:
+x = input("")
+y = x.split()
+print(" ".join(y[::2]))
+
+Even elements:
+x = input("")
+y = x.split()
+# print(y)
+for i in y:
+    if int(i) % 2 == 0:
+        print(i,end=" ")
+
+Greater than previous:
+x = input("")
+x = x.split()
+y = int(x[0])
+for i in x:
+    if y < int(i):
+        print(i,end=" ")
+    y = int(i)
+
+
+Neighbors of the same sign:
+x = input("").split()
+y = 0
+for i in x:
+    if int(i) > 0:
+        if y > 0:
+            print(y,i)
+            break
+    elif int(i) < 0:
+        if y < 0:
+            print(y,i)
+            break
+    y = int(i)
+
+Greater than neighbours:
+a = [int(i) for i in input().split()]
+n = 0
+for i in range(1,len(a)-1):
+    if a[i] > a[i+1] and a[i] > a[i-1]:
+        n += 1
+print(n)
+
+The largest element:
+x = [int(x) for x in input().split()]
+y = x[0]
+bigger = 0
+for i in x:
+    if i >= y:
+        bigger = i
+    y = bigger
+print(bigger, end=" ")
+con = 0
+for i in x:
+    if i == bigger:
+        print(con)
+        break
+    con += 1
+        
+
+The number of distinct elements:
+x = [int(x) for x in input("").split()]
+y = x[0]
+z = 1
+for i in x:
+    if i != y:
+        z += 1
+    y = i
+print(z)
+
+Swap neighbours:
+a = [int(i) for i in input().split()]
+n = 0
+for i in range(int(len(a)/2)):
+    a[n],a[n+1] = a[n+1],a[n]
+    n += 2
+for i in a:
+    print(i, end = " ")
+
+Swap min and max:
+x = [int(x) for x in input("").split()]
+y = max(x)
+z = min(x)
+a = x.index(y)
+b = x.index(z)
+x[b],x[a] = x[a],x[b]
+x =[str(x) for x in x]
+x = " ".join(x)
+print(x)
+
+The number of pairs of equal:
+a = [int(i) for i in input().split()]
+n = 0
+for i in range(len(a)):
+    for j in range(i+1,len(a)):
+        if a[i] == a[j]:
+            n += 1
+print(n)
+
+Unique elements:
+x = [int(x) for x in input("").split()]
+y = []
+z = []
+cou = 0
+for i in x:
+    y.append(i)
+for i in x:
+    for b in y:
+        if i == b:
+            cou += 1
+    if cou == 1:
+        z.append(i)
+    cou = 0
+z =[str(z) for z in z]
+z = " ".join(z)
+print(z)
+
+Queens:
+a = []
+for i in range(8):
+    ls = [int(i) for i in input().split()]
+    a.append(ls)
+n = 0
+for i in range(8):
+    for j in range(i+1,8):
+        if abs(a[i][1]-a[j][1]) == abs(a[i][0]-a[j][0]):
+            n += 1
+        elif abs(a[i][1]-a[j][1]) == 0 or abs(a[i][0]-a[j][0]) == 0:
+            n += 1
+        else:
+            n += 0
+if n == 0:
+    print("NO")
+else:
+    print("YES")
+
+The bowling alley:
+x = [int(x) for x in input("").split()]
+x_1 = ["I"]*x[0]
+y = []
+for i in range(x[1]):
+    z = [int(z) for z in input("").split()]
+    y.append(z[0])
+    y.append(z[1])
+x_2 = 0
+for b in range(int(len(y))//2):
+    x_1[y[x_2]-1:y[x_2+1]] = ["."]*(y[x_2+1] +1 - y[x_2])
+    x_2 += 2
+x_1 = "".join(x_1)
+print(x_1)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
