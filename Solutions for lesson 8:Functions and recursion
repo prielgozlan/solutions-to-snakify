@@ -1,0 +1,55 @@
+The length of the segment:
+def root(x_1,y_1,x_2,y_2):
+    x = ((x_2-x_1)**2 + (y_2-y_1)**2)**0.5
+    return x
+    
+x_1 = float(input(""))
+y_1 = float(input(""))
+x_2 = float(input(""))
+y_2 = float(input(""))
+print(root(x_1,y_1,x_2,y_2))
+
+Negative exponent:
+def power(a,n):
+    return a**n
+print(power(float(input("")),float(input(""))))
+
+Uppercase:
+def capitalize(a):
+    st = a.split(" ")
+    nst = []
+    for i in range(len(st)):
+        b = st[i]
+        c = b[0].upper() + b[1:len(st[i])]
+        nst.append(c)
+    return(" ".join(nst))
+
+print(capitalize(input()))
+
+Exponentiation:
+def re(a,n):
+    if n == 0:
+        return 1
+    else:
+        return a * re(a,n-1)
+
+print(re(float(input("")),float(input(""))))
+
+Reverse the sequence:
+def numbers(x):
+    if x == 0:
+        return 0
+    
+    numbers(int(input("")))
+    print(x)
+print(0)
+numbers(int(input("")))
+
+Fibonacci numbers:
+def fibo(x):
+    if x == 1 or x == 2:
+        return 1
+    else:
+        return fibo(x - 1) + fibo(x - 2)
+
+print(fibo(int(input(""))))
