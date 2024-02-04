@@ -1,0 +1,128 @@
+Maximum:
+x = [int(x) for x in input("").split()]
+y = None
+cou = 0
+cou2 =None
+z = [None,None]
+for i in range(x[0]):
+    y = [int(y) for y in input("").split()]
+    for b in range(x[1]):
+        if y[b] > cou :
+            cou = y[b]
+            z[0] = i
+            z[1] = b
+        elif y[b]<0 :
+            cou = y[b]
+            z[0] = i
+            z[1] =b
+print(' '.join([str(i) for i in z]))
+
+Snowflake:
+x = int(input(""))
+y = [["."] * x for i in range(x)]
+n_1 = 0
+n_2 = -1
+n_3 = x//2
+for a in range(x):
+    if a == x//2:
+        for b in range(x):
+            y[a][b] = "*"
+        n_1 = n_3-1
+        n_2 = n_3+1
+    elif a < x //2:
+        y[a][n_1] = "*"
+        y[a][n_2] = "*"
+        y[a][n_3] = "*"
+        n_1 += 1
+        n_2 -= 1
+    elif a > x//2:
+        y[a][n_1] = "*"
+        y[a][n_2] = "*"
+        y[a][n_3] = "*"
+        n_1 -= 1
+        n_2 += 1
+        
+for x in range(x):
+    print(" ".join(y[x]))            
+
+Chess board:
+x = [int(x)  for x in input("").split()]
+y = [['.'] * x[1] for i in range(x[0])]
+for a in range(x[0]):
+    if a % 2 == 0:
+        for b in range(x[1]):
+            if b % 2 != 0:
+                y[a][b] = "*"
+    if a % 2 != 0:
+        for b in range(x[1]):
+            if b % 2 == 0:
+                y[a][b] = "*"
+for i in y:
+    print(" ".join(i))
+
+The diagonal parallel to the main:
+n = int(input())
+a = [[abs(i - j) for j in range(n)] for i in range(n)]
+for row in a:
+    print(' '.join([str(i) for i in row]))
+
+Side diagonal:
+x = int(input(""))
+y = [[2] * x for y in range(x)]
+z = -1
+for a in range(x):
+    y[a][z] = 1
+    for b in range(x):
+        if y[a][b] == 1:
+            break
+        else:
+            y[a][b] = 0
+    z -= 1
+for x in y:
+    print(" ".join([str(i) for i in x]))
+
+Swap the columns:
+x = [int(x) for x in input("").split()]
+y = [input("").split() for i in range(x[0])]
+z = [int(z) for z in input("").split()]
+def swap_columns(z_1,z_2,y):
+    for a in y:
+        n = a[z_1]
+        n1 = a[z_2]
+        a[z_1] = n1
+        a[z_2] = n
+swap_columns(z[0],z[1],y)
+for x in y:
+    print(" ".join(x))
+
+Scale a matrix:
+x = [int(x) for x in input("").split()]
+y = [input("").split() for i in range(x[0])]
+z = int(input(""))
+def swap_columns(z,y):
+    for a in y:
+        for b in range(x[1]):
+            a[b] = int(a[b]) * z
+swap_columns(z,y)
+for x in y:
+    print(' '.join([str(i) for i in x]))
+
+Multiply two matrices:
+m, n, r = [int(k) for k in input().split()]
+A = [[int(k) for k in input().split()] for i in range(m)]
+B = [[int(k) for k in input().split()] for j in range(n)]
+C = [[0]*r for i in range(m)]
+for i in range(m):
+    for k in range(r):
+        for j in range(n):
+            C[i][k] += A[i][j] * B[j][k]
+
+print('\n'.join([' '.join([str(k) for k in x]) for x in C]))
+
+
+
+
+
+
+
+
