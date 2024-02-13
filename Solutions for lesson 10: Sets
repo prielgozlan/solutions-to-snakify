@@ -1,0 +1,94 @@
+The number of distinct numbers:
+print(len(set(input().split())))
+
+The number of equal numbers:
+x = set(input("").split())
+y = set(input("").split())
+cou = 0
+for i in x:
+    if i in y:
+        cou += 1
+print(cou)
+
+The intersection of sets:
+print(" ".join(sorted(set(input("").split()) & set(input("").split()))))
+
+Has the number been encountered before:
+x = input("").split()
+y = set()
+for i in x:
+    if i not in y:
+        print("NO")
+        y.add(i)
+    else:
+        print("YES")
+
+Cubes:
+def print_set(some_set):
+    print(len(some_set))
+    print(*[str(item) for item in sorted(some_set)])
+
+N, M = [int(s) for s in input().split()]
+A_colors, B_colors = set(), set()
+for i in range(N):
+    A_colors.add(int(input()))
+for i in range(M):
+    B_colors.add(int(input()))
+    
+print_set(A_colors & B_colors)
+print_set(A_colors - B_colors)
+print_set(B_colors - A_colors)
+
+The number of distinct words in some text:
+x = int(input(""))
+y = set()
+cou = 0
+for a in range(x):
+    for b in input("").split():
+        y.add(b)
+print(len(y)) 
+
+Guess the number:
+n = int(input())
+a = [i for i in range(1,n+1)]
+s = set(a)
+while True:
+    guess = input()
+    if guess == 'HELP':
+        break
+    answer = input()
+    if answer == 'NO':
+        s -= set(guess.split())
+    elif answer == 'YES':
+        s &= set(guess.split())
+print(' '.join([str(i) for i in list(s)]))
+
+Polyglots:
+n = int(input())
+num = [0] * n
+langs = []
+for i in range(n):
+    num[i] = int(input())
+    lang = set()
+    for j in range(num[i]):
+        lang.add(input())
+    langs.append(lang)
+
+uni = set.union(*langs)
+inter = set.intersection(*langs)
+print(len(inter))
+print("\n".join(sorted(inter)))
+print(len(uni))
+print("\n".join(sorted(uni)))
+
+
+
+
+
+
+
+
+
+
+
+
