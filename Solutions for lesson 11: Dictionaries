@@ -1,0 +1,136 @@
+Number of occurrences:
+x = [(x) for x in input("").split()]
+y = []
+for a in x:
+    cou = 0
+    if a not in y:
+        print(0,end=" ")
+    elif a in y:
+        for b in y:
+            if a == b:
+                cou += 1
+        print(cou,end=" ")
+    y.append(a)
+
+Dictionary of synonyms:
+x = int(input(""))
+y = [[(y)for y in input("").split()]for a in range(x)]
+z = {}
+w = []
+for i in range(x):
+    z[y[i][0]] = y[i][1]
+x_2 = input("")
+for i in z.keys():
+    w.append(i)
+if x_2 in z.keys():
+    print(z[x_2])
+elif x_2 in z.values():
+    for i in w:
+        if x_2 == z[i]:
+            print(i)
+
+Elections in the USA:
+x = int(input(""))
+z = {}
+for i in range(x):
+    key, val = input().split()
+    if key in z:
+        z[key] += int(val)
+    else:
+        z[key] = int(val)
+for key, val in sorted(z.items()):
+   print(key, val)
+
+The most frequent word:
+x = int(input(""))
+y = [[(y)for y in input("").split()]for i in range(x)]
+y_1 = []
+for i in y:
+    for b in i:
+        y_1.append(b)
+y_1.sort()
+r = {}
+for a in y_1:
+    r[a] = r.get(a,0)+1
+z = max(r.values())
+for i,k in r.items():
+    if k == z:
+        print(i)
+        break
+
+Access rights:
+permissions = {}
+n = int(input())
+for _ in range(n):
+    s = input().split()
+    permissions[s[0]] = set(s[1:])
+for _ in range(int(input())):
+    perm, file = input().split()
+    if perm == 'read':
+        perm = 'R'
+    if perm == 'write':
+        perm = 'W'
+    if perm == 'execute':
+        perm = 'X'
+    if perm in permissions[file]:
+        print('OK')
+    else:
+        print('Access denied')
+
+Countries and cities:
+x = int(input(""))
+y = {}
+for i in range(x):
+    z_1 = input("").split()
+    for a in z_1:
+        y[a] = z_1[0]
+for i in range(int(input(""))):
+    p = input("")
+    for r,k in y.items():
+        
+        if r == p:
+            print(k)
+
+Frequency analysis:
+from collections import Counter
+
+words = []
+for _ in range(int(input())):
+    words.extend(input().split())
+
+counter = Counter(words)
+pairs = [(-pair[1], pair[0]) for pair in counter.most_common()]
+words = [pair[1] for pair in sorted(pairs)]
+print('\n'.join(words))
+
+English-Latin dictionary:
+from collections import defaultdict
+
+lateng = defaultdict(list)
+for i in range(int(input())):
+    eng_word, lat_trans = input().split(' - ')
+    lat_translations = lat_trans.split(', ')
+    for lat_word in lat_translations:
+        lateng[lat_word].append(eng_word)
+        
+print(len(lateng))
+for lat_word, eng_translations in sorted(lateng.items()):
+    print(lat_word + ' - ' + ', '.join(eng_translations))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
